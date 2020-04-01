@@ -13,7 +13,7 @@ The Central Limit Thereom is one of the most fundamental concepts in statistics.
 
 
 For this example, we will assume our population is 100,000 males that live in a hypothetical country. We can say that the height of all the males ranges from 1.5 m (~4.9 feet) to 2 m (~6.6 feet). Our population follows the following distribution (mean is shown by a vertical red line):
-```{r Height Distribution}
+```{r Height_Distribution}
 height_dist <- runif(100000, 1.5, 2)
 mean_height <- mean(height_dist)
 hist(height_dist, 
@@ -24,7 +24,7 @@ abline(v=mean_height,col="red")
 ```
 
 Given this population, we hope to run an experiment to try and approximate this distribution. Since we "can't" sample all 100000 males, we decide our best course of action is to complete simple random sampling (SRS). Below is a function to create samples with size N for reps repetitions from a distribution dist: 
-```{r Sampl Function}
+```{r Sampl_Function}
 # Function takes the sample size N, the number of sampling repetitions to complete and distribution to sample from
 
 sampl <- function(n, reps, dist) {
@@ -36,22 +36,22 @@ sampl <- function(n, reps, dist) {
 
 Lets start with samples of size 3 for 100 repetitions from our testing distribution:
 
-```{r Sample Size 3 1000 reps}
+```{r Sample_Size_3_1000_reps}
 means <- sampl(3, 1000, height_dist)
 hist(means)
 ```
 
 This is where the central limit theorem comes into play: as we increase our sample size (N), the resulting sampling distribution (the distribution of our sample means) will begin to resemble the normal distribution:
 
-```{r Sample Size 10 1000 reps}
+```{r Sample_Size_10_1000_reps}
 hist(sampl(10, 1000, height_dist))
 ```
 
-```{r Sample Size 20 1000 reps}
+```{r Sample_Size_20_1000_reps}
 hist(sampl(20, 1000, height_dist))
 ```
 
-```{r Sample Size 50 1000 reps}
+```{r Sample_Size_50_1000_reps}
 hist(sampl(50, 1000, height_dist))
 ```
 
