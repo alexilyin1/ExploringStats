@@ -4,7 +4,7 @@ output: github_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(fig.path='figs/')
+knitr::opts_chunk$set(fig.path='CLT/figs/')
 ```
 
 

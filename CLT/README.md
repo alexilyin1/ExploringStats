@@ -22,7 +22,7 @@ hist(height_dist,
 abline(v=mean_height,col="red")
 ```
 
-![plot of chunk Height Distribution](figs/Height Distribution-1.png)
+![plot of chunk Height Distribution](CLT/figs/Height Distribution-1.png)
 
 Given this population, we hope to run an experiment to try and approximate this distribution. Since we "can't" sample all 100000 males, we decide our best course of action is to complete simple random sampling (SRS). Below is a function to create samples with size N for reps repetitions from a distribution dist: 
 
@@ -44,7 +44,7 @@ means <- sampl(3, 1000, height_dist)
 hist(means)
 ```
 
-![plot of chunk Sample Size 3 1000 reps](figs/Sample Size 3 1000 reps-1.png)
+![plot of chunk Sample Size 3 1000 reps](CLT/figs/Sample Size 3 1000 reps-1.png)
 
 This is where the central limit theorem comes into play: as we increase our sample size (N), the resulting sampling distribution (the distribution of our sample means) will begin to resemble the normal distribution:
 
@@ -53,21 +53,21 @@ This is where the central limit theorem comes into play: as we increase our samp
 hist(sampl(10, 1000, height_dist))
 ```
 
-![plot of chunk Sample Size 10 1000 reps](figs/Sample Size 10 1000 reps-1.png)
+![plot of chunk Sample Size 10 1000 reps](CLT/figs/Sample Size 10 1000 reps-1.png)
 
 
 ```r
 hist(sampl(20, 1000, height_dist))
 ```
 
-![plot of chunk Sample Size 20 1000 reps](figs/Sample Size 20 1000 reps-1.png)
+![plot of chunk Sample Size 20 1000 reps](CLT/figs/Sample Size 20 1000 reps-1.png)
 
 
 ```r
 hist(sampl(50, 1000, height_dist))
 ```
 
-![plot of chunk Sample Size 50 1000 reps](figs/Sample Size 50 1000 reps-1.png)
+![plot of chunk Sample Size 50 1000 reps](CLT/figs/Sample Size 50 1000 reps-1.png)
 
 
 Through the proggression of the above distributions, we can see that by only changing the sample size N, we have approximated a normal distribution.
