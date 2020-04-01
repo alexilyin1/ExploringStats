@@ -56,10 +56,7 @@ hist(sampl(50, 1000, height_dist))
 ```
 
 
-Through the proggression of the above distributions, we can see that by only changing the sample size N, we have approximated a normal distribution.
+Through the proggression of the above distributions, we can see that by only changing the sample size N, we have approximated a normal distribution. 
 
+The reason that the CLT is one of the most fundamental and important concepts of inteferential statistics, is that it gives us the confidence that we can approximate the distribution of ANY population that we hope to sample. Again, all of this is built upon the assumption that we cannot realistically sample a whole population. Still, the question remains, why is obtaining a normally distributed approximation of the population important. Well the reason lies within the fact that many other statistical/experimental practices are built upon the assumption that the population is normally distributed. For example, linear regression and hypothesis testing are two examples of statistical methods that are built on assumptions of normality. Again, for someone that has not completed such methods themselves, creating a normal approximation might not seem important. But as your exposure to statistical methods increases, your appreciation of the CLT will as well. 
 
-```{r}
-
-knitr::opts_chunk$get('fig.path')
-```
