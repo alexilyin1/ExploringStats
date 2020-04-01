@@ -57,3 +57,9 @@ hist(sampl(50, 1000, height_dist))
 
 
 Through the proggression of the above distributions, we can see that by only changing the sample size N, we have approximated a normal distribution.
+
+
+```{r}
+
+knitr::opts_chunk$get('fig.path')
+```
