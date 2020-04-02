@@ -159,6 +159,18 @@ these points), we can see that 10.9 is MUCH larger than 1.96, and the
 probability that the null hypothesis will be true is essentially 0,
 based on the average score of this school as well as the sample size we
 chose. For this reason, we can emphatically reject the null hypothesis.
+As a fun plot, we can see where this z score would be on the Z
+distribution
+
+``` r
+x <- seq(-4, 11, length=100)
+y <- dnorm(x)
+
+n <- plot(x, y, type='l', lwd=2)
+points(x=z, y=0, col='red')
+```
+
+![](README_figs/README-z_outlier-1.png)<!-- -->
 
 ### Values generated from the hypothesis test
 

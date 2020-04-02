@@ -69,7 +69,15 @@ z <- (sample_mean-pop_mean) / (sd(school_sample)/sqrt(250))
 pnorm(z)
 ```
 
-With our z score being ```r z ```, and our defined cutoffs being +/- 1.96 (2.5% of the area of the normal curve to the right/left of each of these points), we can see that 10.9 is MUCH larger than 1.96, and the probability that the null hypothesis will be true is essentially 0, based on the average score of this school as well as the sample size we chose. For this reason, we can emphatically reject the null hypothesis. 
+With our z score being ```r z ```, and our defined cutoffs being +/- 1.96 (2.5% of the area of the normal curve to the right/left of each of these points), we can see that 10.9 is MUCH larger than 1.96, and the probability that the null hypothesis will be true is essentially 0, based on the average score of this school as well as the sample size we chose. For this reason, we can emphatically reject the null hypothesis. As a fun plot, we can see where this z score would be on the Z distribution
+
+```{r z_outlier}
+x <- seq(-4, 11, length=100)
+y <- dnorm(x)
+
+n <- plot(x, y, type='l', lwd=2)
+points(x=z, y=0, col='red')
+```
 
 
 ### Values generated from the hypothesis test
