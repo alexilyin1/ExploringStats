@@ -22,7 +22,7 @@ bp <- barplot(ls, col = c('red', 'turquoise'))
 text(bp, y=ls/2, labels=as.character(ls))
 ```
 
-```{r Coin_Example2}
+```{r Coin_Example2  }
 trials <- rbinom(5, 1, 0.5)
 ls <- c(0.5, mean(trials))
 bp <- barplot(ls, col = c('red', 'turquoise'))
